@@ -12,6 +12,7 @@ export class ProductoCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
