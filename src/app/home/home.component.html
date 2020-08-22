@@ -5,9 +5,17 @@
 </div>
 <div class="row my-3">
     <div class="col-md-3">
-        Otro componente
+        <app-filtro-categorias></app-filtro-categorias>
     </div>
-    <div class="card-columns col-md-9">
-        <app-producto-card [producto]="producto" *ngFor="let producto of productos"></app-producto-card>
+    <div class="col-md-9">
+        <div *ngIf="!busqueda" class="card-columns">
+            <app-producto-card [producto]="producto" *ngFor="let producto of productos"></app-producto-card>
+        </div>
+        <div *ngIf="busqueda" class="card-columns">
+            <app-producto-card [producto]="producto" *ngFor="let producto of productosFiltrados"></app-producto-card>
+        </div>
+        <div class="container" *ngIf="productosFiltrados.length == 0 && busqueda">
+            <span class="alert alert-warning">No se encontraron resultados de la búsqueda</span>
+        </div>
     </div>
 </div>

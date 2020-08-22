@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 .material-icons {
     font-size: 25px;
+}
+
+.text-nav {
+    font-family: 'Roboto', sans-serif;
+    color: #100541;
 }

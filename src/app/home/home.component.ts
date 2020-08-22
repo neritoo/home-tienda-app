@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Producto } from '../model/producto';
 import { ProductoService } from '../services/producto.service';
 
@@ -10,12 +11,24 @@ import { ProductoService } from '../services/producto.service';
 export class HomeComponent implements OnInit {
 
   productos: Producto[];
+  productosFiltrados: Producto[];
+  busqueda: boolean;
   
-  constructor(private productoService: ProductoService) {
-
+  constructor(private productoService: ProductoService, private activatedRoute: ActivatedRoute) {
+    this.productos = [];
+    this.productosFiltrados = [];
+    this.busqueda = false;
   }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe( params => {
+      const termino = params.buscar;
+      if (termino !== null && termino !== undefined) {
+        this.busqueda = true;
+        this.productosFiltrados = this.productoService.buscarProductos(termino);
+        console.log(this.productosFiltrados);
+      }
+    });
     this.getProductos();
   }
 
