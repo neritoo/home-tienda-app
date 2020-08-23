@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Producto } from '../model/producto';
 import { ProductoService } from '../services/producto.service';
+import { Categoria } from '../model/categoria';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,8 @@ export class HomeComponent implements OnInit {
 
   productos: Producto[];
   productosFiltrados: Producto[];
+  productosCategoria: Producto[] = [];
+  
   busqueda: boolean;
   
   constructor(private productoService: ProductoService, private activatedRoute: ActivatedRoute) {
@@ -26,7 +29,6 @@ export class HomeComponent implements OnInit {
       if (termino !== null && termino !== undefined) {
         this.busqueda = true;
         this.productosFiltrados = this.productoService.buscarProductos(termino);
-        console.log(this.productosFiltrados);
       }
     });
     this.getProductos();
@@ -34,6 +36,25 @@ export class HomeComponent implements OnInit {
 
   getProductos(): void {
     this.productos = this.productoService.getProductos();
+  }
+  
+  filtrarPorCategoria(event: Categoria[]) {
+    let categorias: Categoria[] = [];
+    event.forEach(cat => {
+      categorias.push(cat);
+    });
+  
+    let productos: Producto[] = [];
+
+    this.productos.forEach(producto => {
+      categorias.some(cat => {
+        if (producto.categoria.nombre == cat.nombre) {
+          productos.push(producto);
+        }
+      })
+    });
+
+    this.productosCategoria = productos;
   }
 
 }

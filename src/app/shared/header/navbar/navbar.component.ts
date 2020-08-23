@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { ThemeService } from '../../../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +9,12 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  dark: boolean = true;
+  
+  constructor(private router: Router, private themeService: ThemeService) { }
 
   ngOnInit(): void {
+    this.themeService.enviarTema(this.dark);
   }
 
   buscarProducto(buscar: string): void {
@@ -19,6 +23,11 @@ export class NavbarComponent implements OnInit {
     } else {
       this.router.navigate(['home']);
     }
+  }
+
+  cambiarTema() {
+    this.dark = !this.dark;
+    this.themeService.enviarTema(this.dark);
   }
 
 }

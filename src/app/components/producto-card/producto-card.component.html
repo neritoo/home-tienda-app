@@ -1,7 +1,7 @@
-<div class="card mb-3 w-auto">
+<div class="card mb-3">
     <mat-chip-list aria-label="Fish selection">
         <mat-chip class="m-2" *ngIf="producto.descuento" color="accent" selected>35% OFF</mat-chip>
-        <mat-chip class="m-2">{{producto.categoria}}</mat-chip>
+        <mat-chip class="m-2">{{producto.categoria.nombre}}</mat-chip>
     </mat-chip-list>
     <div class="row no-gutters">
         <div class="col-md-4 my-5">
@@ -10,8 +10,9 @@
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title text-center"><strong>{{producto.nombre}}</strong></h5>
+                <hr>
                 <p class="card-text">{{producto.descripcion}}</p>
-                <p class="card-text"><small class="text-success">{{producto.precio | currency}}</small></p>
+                <h3 class="card-text text-success">{{producto.precio | currency}}</h3>
                 <button class="btn btn-sm btn-block btn-outline-primary">Agregar al carrito</button>
             </div>
         </div>

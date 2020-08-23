@@ -10,21 +10,27 @@ export class ProductoService {
   productos: Producto[] = [
     {
       id: 1,
-      nombre: 'RTX 2080TI',
+      nombre: 'MSI RTX 2080TI',
       descripcion: 'Placa de video MSI RTX 2080TI',
       precio: 60000,
       imagen: 'assets/images/rtx-2080ti.jpg',
       descuento: false,
-      categoria: 'GPU'
+      categoria: {
+        id: 1,
+        nombre: 'GPU'
+      }
     },
     {
       id: 2,
-      nombre: 'RTX 2070',
+      nombre: 'ASUS RTX 2070',
       descripcion: 'Placa de video ASUS RTX 2070',
       precio: 50000,
       imagen: 'assets/images/rtx-2070.jpg',
       descuento: true,
-      categoria: 'GPU'
+      categoria: {
+        id: 1,
+        nombre: 'GPU'
+      }
     },
     {
       id: 3,
@@ -33,7 +39,10 @@ export class ProductoService {
       precio: 32500,
       imagen: 'assets/images/i7-7700k.jpg',
       descuento: false,
-      categoria: 'CPU'
+      categoria: {
+        id: 2,
+        nombre: 'CPU'
+      }
     },
     {
       id: 4,
@@ -42,7 +51,46 @@ export class ProductoService {
       precio: 32500,
       imagen: 'assets/images/i7-8700k.jpg',
       descuento: false,
-      categoria: 'CPU'
+      categoria: {
+        id: 2,
+        nombre: 'CPU'
+      }
+    },
+    {
+      id: 5,
+      nombre: 'ASUS RTX 1070',
+      descripcion: 'Placa de video ASUS RTX 1070',
+      precio: 38000,
+      imagen: 'assets/images/rtx-1070-asus.jpg',
+      descuento: true,
+      categoria: {
+        id: 1,
+        nombre: 'GPU'
+      },
+    },
+    {
+      id: 6,
+      nombre: 'ASUS ROG STRIX RTX 1060',
+      descripcion: 'Placa de video ASUS RTX 1070',
+      precio: 30000,
+      imagen: 'assets/images/rtx-1060-asus.jpg',
+      descuento: true,
+      categoria: {
+        id: 1,
+        nombre: 'GPU'
+      }
+    },
+    {
+      id: 7,
+      nombre: 'Ryzen 9 3900X',
+      descripcion: 'Microprocesador Ryzen 3900x',
+      precio: 80000,
+      imagen: 'assets/images/ryzen-3900x.jpg',
+      descuento: false,
+      categoria: {
+        id: 2,
+        nombre: 'CPU'
+      }
     }
   ];
 

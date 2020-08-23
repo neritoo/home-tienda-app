@@ -1,9 +1,9 @@
 <div class="card">
-    <div class="card-header text-white bg-dark text-center">
+    <div class="card-header text-white text-center" [ngClass]="{'bg-dark': dark, 'bg-primary': !dark}">
         Categorías
     </div>
     <div class="card-body">
-        <mat-form-field>
+        <mat-form-field class="col col-sm-12" appearance="fill">
             <mat-label>Elegir categoría</mat-label>
             <mat-select>
                 <mat-option (click)="agregarCategoria(categoria)" *ngFor="let categoria of categorias" [value]="categoria.nombre">{{categoria.nombre}}</mat-option>
@@ -11,7 +11,7 @@
         </mat-form-field>
 
         <mat-chip-list *ngFor="let categoria of categoriasSelec">
-            <mat-chip [selectable]="selectable" (removed)="remove(categoria)">
+            <mat-chip [ngClass]="{'bg-dark': dark, 'bg-primary': !dark}" selected [selectable]="selectable" (removed)="remove(categoria)">
                 {{categoria.nombre}}
                 <mat-icon matChipRemove>cancel</mat-icon>
             </mat-chip>

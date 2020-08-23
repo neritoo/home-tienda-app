@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ProductoService } from '../../services/producto.service';
 import { Categoria } from '../../model/categoria';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-filtro-categorias',
@@ -12,14 +13,22 @@ export class FiltroCategoriasComponent implements OnInit {
   categorias: Categoria[];
   categoriasSelec: Categoria[];
   selectable: boolean;
+  
+  dark: boolean;
 
-  constructor(private productoService: ProductoService) {
+  @Output() categoriasEvent = new EventEmitter<Categoria[]>();
+
+  constructor(private productoService: ProductoService, private themeService: ThemeService) {
     this.categorias = [];
     this.categoriasSelec = [];
   }
 
   ngOnInit(): void {
     this.getCategorias();
+    this.enviarCategorias();
+
+    this.themeService.theme.subscribe(resp => this.dark = resp);
+    this.dark = this.themeService.recibirTema();
   }
 
   getCategorias(): void {
@@ -37,26 +46,8 @@ export class FiltroCategoriasComponent implements OnInit {
       this.categoriasSelec.splice(index, 1);
     }
 
-    this.categorias = this.productoService.getCategorias();
-
-    console.log(this.categorias);
-    console.log(this.categoriasSelec);
+    this.enviarCategorias();
   }
-
-  // agregarCategoria(event: any) {
-  //   // console.log(event);
-  //   let categoria;
-  //   if (event.isUserInput) {
-  //     categoria = new Categoria();
-  //     categoria.nombre = event.source.value;
-  //     this.categoriasSelec.push(categoria);
-  //   } else {
-  //     return ;
-  //   }
-
-  //   console.log(categoria);
-
-  // }
 
   agregarCategoria(categoria: Categoria) {
 
@@ -64,6 +55,11 @@ export class FiltroCategoriasComponent implements OnInit {
       this.categoriasSelec.push(categoria);
     }
 
+    this.enviarCategorias();
+  }
+
+  enviarCategorias() {
+    this.categoriasEvent.emit(this.categoriasSelec);
   }
 
 }

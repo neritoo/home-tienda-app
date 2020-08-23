@@ -5,5 +5,13 @@
 
 .text-nav {
     font-family: 'Roboto', sans-serif;
-    color: #100541;
+    color: white;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    color: #a0a1a1;
 }

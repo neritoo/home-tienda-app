@@ -1,3 +1,5 @@
+import { Categoria } from './categoria';
+
 export class Producto {
     id: number;
     nombre: string;
@@ -5,5 +7,5 @@ export class Producto {
     precio: number;
     imagen: string;
     descuento: boolean;
-    categoria: string;
+    categoria: Categoria;
 }

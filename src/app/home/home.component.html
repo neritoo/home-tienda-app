@@ -1,21 +1,33 @@
 <div class="row">
-    <div class="col-sm-12">
-        <app-banner></app-banner>
+    <div class="col-sm-12 animate__animated animate__fadeInLeft">
+        <app-banner *ngIf="!busqueda"></app-banner>
     </div>
 </div>
 <div class="row my-3">
-    <div class="col-md-3">
-        <app-filtro-categorias></app-filtro-categorias>
+    <div class="col col-md-3" *ngIf="!busqueda">
+        <app-filtro-categorias (categoriasEvent)="filtrarPorCategoria($event)"></app-filtro-categorias>
     </div>
-    <div class="col-md-9">
-        <div *ngIf="!busqueda" class="card-columns">
-            <app-producto-card [producto]="producto" *ngFor="let producto of productos"></app-producto-card>
+
+    <div class="col col-md-9 animate__animated animate__fadeIn animate__fast">
+
+        <div class="row">
+
+            <ng-container *ngIf="!busqueda">
+                <div class="col col-md-4" *ngFor="let producto of productosCategoria">
+                    <app-producto-card [producto]="producto"></app-producto-card>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="busqueda">
+                <div class="col col-md-4" *ngFor="let producto of productosFiltrados">
+                    <app-producto-card [producto]="producto"></app-producto-card>
+                </div>
+            </ng-container>
+
+            <div class="col" *ngIf="productosFiltrados.length == 0 && busqueda">
+                <span *ngIf="busqueda" class="alert alert-warning">No se encontraron resultados de la búsqueda.</span>
+            </div>
         </div>
-        <div *ngIf="busqueda" class="card-columns">
-            <app-producto-card [producto]="producto" *ngFor="let producto of productosFiltrados"></app-producto-card>
-        </div>
-        <div class="container" *ngIf="productosFiltrados.length == 0 && busqueda">
-            <span class="alert alert-warning">No se encontraron resultados de la búsqueda</span>
-        </div>
+
     </div>
 </div>
