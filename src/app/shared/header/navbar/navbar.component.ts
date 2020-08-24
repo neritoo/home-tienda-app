@@ -9,7 +9,7 @@ import { ThemeService } from '../../../services/theme.service';
 })
 export class NavbarComponent implements OnInit {
 
-  dark: boolean = true;
+  dark: boolean;
   
   constructor(private router: Router, private themeService: ThemeService) { }
 
