@@ -1,18 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-    height: 100%;
-}
-
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background: whitesmoke;
+    height: 100%;
 }
 
 .content {
-    height: 100%;
+    height: max-content;
 }
 
 // Temas
@@ -22,8 +17,22 @@ body {
     color: #ccc;
 }
 
+.navbar.tema-dark {
+    background-color: #464646;
+    color: white !important;
+}
+
+.bad.tema-dark {
+    background-color: #121213 !important;
+}
+
 .card.tema-dark {
-    border-color: rgba(29, 29, 29, 0.568);
+    background-color: #464646;
+    border: 1px solid rgba(0, 0, 0, 0.562);
+}
+
+hr.tema-dark {
+    border-color: rgb(136, 136, 136);
 }
 
 .card-header.tema-dark {
@@ -38,7 +47,7 @@ body {
 }
 
 .card-body.tema-dark {
-    background-color: rgb(58, 57, 57);
+    background-color: #464646;
     h3,
     h5 {
         color: #ffffff;
@@ -48,19 +57,70 @@ body {
     }
 }
 
+.alert.tema-dark {
+    background-color: rgb(58, 57, 57);
+    h1,
+    h2 {
+        color: #ffffff;
+    }
+    h3,
+    h4,
+    h5 {
+        color: #ccc;
+    }
+}
+
+// Tema white
+.content.tema-white {
+    background-color: white;
+}
+
+a.tema-white {
+    color: black !important;
+}
+
+// a.tema-white:hover {
+//     color: rgba(0, 0, 255, 0.219) !important;
+// }
+.navbar.tema-white {
+    background-color: #f8f9fa;
+    color: black !important;
+}
+
+.bad.tema-white {
+    background-color: #b4b4b4 !important;
+    color: black !important;
+}
+
+.alert.tema-white {
+    background-color: #cce5ff;
+    color: #004085 !important;
+    border-color: #b8daff;
+}
+
 // Tema Purple
 .content.tema-purple {
     background-color: #d0b7f4;
 }
 
+.navbar.tema-purple {
+    background-color: #7852ae;
+    color: white !important;
+}
+
+.bad.tema-purple {
+    background-color: #7852ae !important;
+}
+
+.card.tema-purple {
+    background-color: #f0ebf7;
+    border: 1px solid rgba(0, 0, 0, 0.322);
+}
+
 .card-header.tema-purple {
-    background-color: #ecdfff;
-    h3,
-    h5 {
-        color: #7852ae;
-    }
+    background-color: #7852ae;
     p {
-        color: #000;
+        color: white;
     }
 }
 
@@ -75,19 +135,42 @@ body {
     }
 }
 
+.alert.tema-purple {
+    background-color: #7852ae;
+    h1,
+    h2 {
+        color: #f0ebf7;
+    }
+    h3,
+    h4,
+    h5 {
+        color: #ccc;
+    }
+}
+
 // Tema Orange
 .content.tema-orange {
     background-color: #f4c9b7;
 }
 
+.navbar.tema-orange {
+    background-color: #b64b1e;
+    color: white !important;
+}
+
+.bad.tema-orange {
+    background-color: #b64b1e !important;
+}
+
+.card.tema-orange {
+    background-color: #f8ece7;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+}
+
 .card-header.tema-orange {
-    background-color: #f4dfd6;
-    h3,
-    h5 {
-        color: #b64b1e;
-    }
+    background-color: #b64b1e;
     p {
-        color: #000;
+        color: white;
     }
 }
 
@@ -102,19 +185,42 @@ body {
     }
 }
 
+.alert.tema-orange {
+    background-color: #b64b1e;
+    h1,
+    h2 {
+        color: #f4dfd6;
+    }
+    h3,
+    h4,
+    h5 {
+        color: #f8ece7;
+    }
+}
+
 // Tema Green
 .content.tema-green {
     background-color: #c3e3c1;
 }
 
+.navbar.tema-green {
+    background-color: #5faf3b;
+    color: white !important;
+}
+
+.bad.tema-green {
+    background-color: #5faf3b !important;
+}
+
+.card.tema-green {
+    background-color: #e8f7e7;
+    border: 1px solid rgba(0, 0, 0, 0.322);
+}
+
 .card-header.tema-green {
-    background-color: #e2f6e1;
-    h3,
-    h5 {
-        color: #5faf3b;
-    }
+    background-color: #5faf3b;
     p {
-        color: #000;
+        color: white;
     }
 }
 
@@ -129,19 +235,46 @@ body {
     }
 }
 
+.alert.tema-green {
+    background-color: #5faf3b;
+    h1,
+    h2 {
+        color: #e8f7e7;
+    }
+    h3,
+    h4,
+    h5 {
+        color: #e8f7e7;
+    }
+}
+
 // Tema Blue
 .content.tema-blue {
     background-color: #bec7e7;
 }
 
+.navbar.tema-blue {
+    background-color: #007bff;
+    color: white !important;
+}
+
+.bad.tema-blue {
+    background-color: #007bff !important;
+}
+
+.card.tema-blue {
+    background-color: #e4e8f7;
+    border: 1px solid rgba(0, 0, 0, 0.322);
+}
+
 .card-header.tema-blue {
-    background-color: #d8def4;
+    background-color: #007bff;
     h3,
     h5 {
-        color: #1141c1;
+        color: #007bff;
     }
     p {
-        color: #000;
+        color: white;
     }
 }
 
@@ -149,9 +282,22 @@ body {
     background-color: #e4e8f7;
     h3,
     h5 {
-        color: #1141c1;
+        color: #007bff;
     }
     p {
         color: #000;
+    }
+}
+
+.alert.tema-blue {
+    background-color: #007bff;
+    h1,
+    h2 {
+        color: #d8def4;
+    }
+    h3,
+    h4,
+    h5 {
+        color: #e4e8f7;
     }
 }

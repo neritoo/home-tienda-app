@@ -25,7 +25,7 @@ export class ProductoService {
       nombre: 'ASUS RTX 2070',
       descripcion: 'Placa de video ASUS RTX 2070',
       precio: 50000,
-      imagen: 'assets/images/rtx-2070.jpg',
+      imagen: 'assets/images/rtx-2070.png',
       descuento: true,
       categoria: {
         id: 1,

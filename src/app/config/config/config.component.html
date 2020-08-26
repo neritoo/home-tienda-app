@@ -1,0 +1,14 @@
+<div class="row" style="height: 87.2vh;">
+    <div class="col col-md-4 my-3">
+        <h1>Cambiar tema</h1>
+        <hr>
+        <div class="theme-options">
+            <div class="theme-op" [ngClass]="(tema == 'tema-white') ? 'active' : ''" (click)="setTema('tema-white')" id="theme-white"></div>
+            <div class="theme-op" [ngClass]="(tema == 'tema-blue') ? 'active' : ''" (click)="setTema('tema-blue')" id="theme-blue"></div>
+            <div class="theme-op" [ngClass]="(tema == 'tema-orange') ? 'active' : ''" (click)="setTema('tema-orange')" id="theme-orange"></div>
+            <div class="theme-op" [ngClass]="(tema == 'tema-purple') ? 'active' : ''" (click)="setTema('tema-purple')" id="theme-purple"></div>
+            <div class="theme-op" [ngClass]="(tema == 'tema-green') ? 'active' : ''" (click)="setTema('tema-green')" id="theme-green"></div>
+            <div class="theme-op" [ngClass]="(tema == 'tema-dark') ? 'active' : ''" (click)="setTema('tema-dark')" id="theme-black"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+.theme-options {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px 0;
+    #theme-white {
+        background-color: #eee;
+    }
+    #theme-blue {
+        background-color: #1e41c1;
+    }
+    #theme-orange {
+        background-color: #b64b1e;
+    }
+    #theme-purple {
+        background-color: #7852ae;
+    }
+    #theme-green {
+        background-color: #5faf3b;
+    }
+    #theme-black {
+        background-color: #000;
+    }
+}
+
+.theme-op {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin: 2px 10px;
+    border: 1px solid #fff;
+    display: inline-block;
+    opacity: .5;
+}
+
+.active {
+    opacity: 1;
+    transition: transform .3s;
+    transform: scale(1.3);
+}

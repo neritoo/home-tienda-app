@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-banner',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
+  tema: string;
+
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
+    this.themeService.temaEvent.subscribe(tema => this.tema = tema);
+    this.tema = this.themeService.getTema();
   }
 
 }

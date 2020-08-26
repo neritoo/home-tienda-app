@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-producto-card',
@@ -8,9 +9,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductoCardComponent implements OnInit {
 
   @Input() producto: any;
-  constructor() { }
+  tema: string;
+
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
+    this.themeService.temaEvent.subscribe(tema => this.tema = tema);
+    this.tema = this.themeService.getTema();
   }
 
 }

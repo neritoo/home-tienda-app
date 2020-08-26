@@ -6,17 +6,16 @@ import { Observable } from 'rxjs';
 })
 export class ThemeService {
 
-  @Output() theme: EventEmitter<boolean> = new EventEmitter();
-  dark: boolean;
+  @Output() temaEvent: EventEmitter<string> = new EventEmitter();
 
   constructor() {}
 
-  enviarTema(dark: boolean) {
-    this.dark = dark;
-    this.theme.emit(dark);
+  setTema(tema: string): void {
+    localStorage.setItem('tema', tema);
+    this.temaEvent.emit(tema);
   }
 
-  recibirTema(): boolean {
-    return this.dark;
+  getTema(): string {
+    return localStorage.getItem('tema');
   }
 }

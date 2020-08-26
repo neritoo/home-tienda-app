@@ -9,12 +9,13 @@ import { ThemeService } from '../../../services/theme.service';
 })
 export class NavbarComponent implements OnInit {
 
-  dark: boolean;
+  tema: string;
   
   constructor(private router: Router, private themeService: ThemeService) { }
 
   ngOnInit(): void {
-    this.themeService.enviarTema(this.dark);
+    this.themeService.temaEvent.subscribe(tema => this.tema = tema);
+    this.tema = this.themeService.getTema();
   }
 
   buscarProducto(buscar: string): void {
@@ -24,10 +25,4 @@ export class NavbarComponent implements OnInit {
       this.router.navigate(['home']);
     }
   }
-
-  cambiarTema() {
-    this.dark = !this.dark;
-    this.themeService.enviarTema(this.dark);
-  }
-
 }

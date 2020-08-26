@@ -13,10 +13,9 @@ export class FiltroCategoriasComponent implements OnInit {
   categorias: Categoria[];
   categoriasSelec: Categoria[];
   selectable: boolean;
-  
-  dark: boolean;
-
   @Output() categoriasEvent = new EventEmitter<Categoria[]>();
+
+  tema:string;
 
   constructor(private productoService: ProductoService, private themeService: ThemeService) {
     this.categorias = [];
@@ -26,9 +25,8 @@ export class FiltroCategoriasComponent implements OnInit {
   ngOnInit(): void {
     this.getCategorias();
     this.enviarCategorias();
-
-    this.themeService.theme.subscribe(resp => this.dark = resp);
-    this.dark = this.themeService.recibirTema();
+    this.themeService.temaEvent.subscribe(tema => this.tema = tema);
+    this.tema = this.themeService.getTema();
   }
 
   getCategorias(): void {
