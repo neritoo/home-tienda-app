@@ -1,0 +1,157 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: whitesmoke;
+}
+
+.content {
+    height: 100%;
+}
+
+// Temas
+// Tema Dark
+.content.tema-dark {
+    background-color: #5c5c5c;
+    color: #ccc;
+}
+
+.card.tema-dark {
+    border-color: rgba(29, 29, 29, 0.568);
+}
+
+.card-header.tema-dark {
+    background-color: #333;
+    h3,
+    h5 {
+        color: #ffffff;
+    }
+    p {
+        color: #ccc;
+    }
+}
+
+.card-body.tema-dark {
+    background-color: rgb(58, 57, 57);
+    h3,
+    h5 {
+        color: #ffffff;
+    }
+    p {
+        color: #ccc;
+    }
+}
+
+// Tema Purple
+.content.tema-purple {
+    background-color: #d0b7f4;
+}
+
+.card-header.tema-purple {
+    background-color: #ecdfff;
+    h3,
+    h5 {
+        color: #7852ae;
+    }
+    p {
+        color: #000;
+    }
+}
+
+.card-body.tema-purple {
+    background-color: #f0ebf7;
+    h3,
+    h5 {
+        color: #7852ae;
+    }
+    p {
+        color: #000;
+    }
+}
+
+// Tema Orange
+.content.tema-orange {
+    background-color: #f4c9b7;
+}
+
+.card-header.tema-orange {
+    background-color: #f4dfd6;
+    h3,
+    h5 {
+        color: #b64b1e;
+    }
+    p {
+        color: #000;
+    }
+}
+
+.card-body.tema-orange {
+    background-color: #f8ece7;
+    h3,
+    h5 {
+        color: #b64b1e;
+    }
+    p {
+        color: #000;
+    }
+}
+
+// Tema Green
+.content.tema-green {
+    background-color: #c3e3c1;
+}
+
+.card-header.tema-green {
+    background-color: #e2f6e1;
+    h3,
+    h5 {
+        color: #5faf3b;
+    }
+    p {
+        color: #000;
+    }
+}
+
+.card-body.tema-green {
+    background-color: #e8f7e7;
+    h3,
+    h5 {
+        color: #5faf3b;
+    }
+    p {
+        color: #000;
+    }
+}
+
+// Tema Blue
+.content.tema-blue {
+    background-color: #bec7e7;
+}
+
+.card-header.tema-blue {
+    background-color: #d8def4;
+    h3,
+    h5 {
+        color: #1141c1;
+    }
+    p {
+        color: #000;
+    }
+}
+
+.card-body.tema-blue {
+    background-color: #e4e8f7;
+    h3,
+    h5 {
+        color: #1141c1;
+    }
+    p {
+        color: #000;
+    }
+}
