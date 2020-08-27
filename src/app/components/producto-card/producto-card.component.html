@@ -1,4 +1,4 @@
-<div class="card mb-3 zoom {{tema}}">
+<div class="card mb-3 zoom {{tema}}" style="height: 90%;">
     <mat-chip-list aria-label="Fish selection">
         <mat-chip class="m-2" *ngIf="producto.descuento" color="accent" selected>35% OFF</mat-chip>
         <mat-chip class="m-2">{{producto.categoria.nombre}}</mat-chip>
@@ -8,8 +8,8 @@
             <img [src]="producto.imagen" class="card-img image" alt="...">
         </div>
         <div class="col-md-8">
-            <div class="card-body {{tema}}">
-                <h3 class="card-title text-center"><strong>{{producto.nombre}}</strong></h3>
+            <div class="card-body {{tema}}" style="height: 90%;">
+                <h4 class="card-title text-center"><strong>{{producto.nombre}}</strong></h4>
                 <hr class="{{tema}}">
                 <p class="card-text">{{producto.descripcion}}</p>
                 <h4 class="card-text text-success">{{producto.precio | currency}}</h4>

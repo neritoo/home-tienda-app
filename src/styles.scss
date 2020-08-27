@@ -1,13 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    height: 100%;
-}
-
 .content {
-    height: max-content;
+    height: 500%;
 }
 
 // Temas
@@ -23,7 +15,7 @@ body {
 }
 
 .bad.tema-dark {
-    background-color: #121213 !important;
+    background-color: #333 !important;
 }
 
 .card.tema-dark {
@@ -72,24 +64,31 @@ hr.tema-dark {
 
 // Tema white
 .content.tema-white {
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 a.tema-white {
-    color: black !important;
+    color: black;
 }
 
 // a.tema-white:hover {
 //     color: rgba(0, 0, 255, 0.219) !important;
 // }
 .navbar.tema-white {
-    background-color: #f8f9fa;
-    color: black !important;
+    background-color: #007bff;
+    color: white !important;
 }
 
 .bad.tema-white {
-    background-color: #b4b4b4 !important;
-    color: black !important;
+    background-color: #007bff !important;
+    color: white !important;
+}
+
+.card-header.tema-white {
+    background-color: #007bff;
+    p {
+        color: white;
+    }
 }
 
 .alert.tema-white {
@@ -126,7 +125,10 @@ a.tema-white {
 
 .card-body.tema-purple {
     background-color: #f0ebf7;
+    h1,
+    h2,
     h3,
+    h4,
     h5 {
         color: #7852ae;
     }

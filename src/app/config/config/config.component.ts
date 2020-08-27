@@ -13,7 +13,8 @@ export class ConfigComponent implements OnInit {
   constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
-
+    this.themeService.temaEvent.subscribe(tema => this.tema = tema);
+    this.tema = this.themeService.getTema();
   }
 
   setTema(tema: string): void {

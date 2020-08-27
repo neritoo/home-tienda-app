@@ -13,7 +13,7 @@ export class ProductoService {
       nombre: 'MSI RTX 2080TI',
       descripcion: 'Placa de video MSI RTX 2080TI',
       precio: 60000,
-      imagen: 'assets/images/rtx-2080ti.jpg',
+      imagen: 'assets/images/rtx-2080ti.png',
       descuento: false,
       categoria: {
         id: 1,
@@ -37,7 +37,7 @@ export class ProductoService {
       nombre: 'Intel i7 7700K',
       descripcion: 'CPU Intel i7 Core 7700K',
       precio: 32500,
-      imagen: 'assets/images/i7-7700k.jpg',
+      imagen: 'assets/images/i7-7700k.png',
       descuento: false,
       categoria: {
         id: 2,
@@ -49,7 +49,7 @@ export class ProductoService {
       nombre: 'Intel i7 8700K',
       descripcion: 'CPU Intel i7 Core 8700K',
       precio: 32500,
-      imagen: 'assets/images/i7-8700k.jpg',
+      imagen: 'assets/images/i7-8700k.png',
       descuento: false,
       categoria: {
         id: 2,
@@ -58,10 +58,10 @@ export class ProductoService {
     },
     {
       id: 5,
-      nombre: 'ASUS RTX 1070',
-      descripcion: 'Placa de video ASUS RTX 1070',
+      nombre: 'ASUS GTX 1070',
+      descripcion: 'Placa de video ASUS GTX 1070',
       precio: 38000,
-      imagen: 'assets/images/rtx-1070-asus.jpg',
+      imagen: 'assets/images/gtx-1070-asus.png',
       descuento: true,
       categoria: {
         id: 1,
@@ -70,10 +70,10 @@ export class ProductoService {
     },
     {
       id: 6,
-      nombre: 'ASUS ROG STRIX RTX 1060',
-      descripcion: 'Placa de video ASUS RTX 1070',
+      nombre: 'ASUS ROG STRIX GTX 1060',
+      descripcion: 'Placa de video ASUS GTX 1060',
       precio: 30000,
-      imagen: 'assets/images/rtx-1060-asus.jpg',
+      imagen: 'assets/images/gtx-1060-asus.png',
       descuento: true,
       categoria: {
         id: 1,
@@ -85,7 +85,7 @@ export class ProductoService {
       nombre: 'Ryzen 9 3900X',
       descripcion: 'Microprocesador Ryzen 3900x',
       precio: 80000,
-      imagen: 'assets/images/ryzen-3900x.jpg',
+      imagen: 'assets/images/ryzen-3900x.png',
       descuento: false,
       categoria: {
         id: 2,

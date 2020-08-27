@@ -9,9 +9,7 @@
     </div>
 
     <div class="col col-md-9 animate__animated animate__fadeIn animate__fast">
-
         <div class="row">
-
             <ng-container *ngIf="!busqueda">
                 <div class="col col-md-4" *ngFor="let producto of productosCategoria">
                     <app-producto-card [producto]="producto"></app-producto-card>
@@ -28,6 +26,5 @@
                 <span *ngIf="busqueda" class="alert alert-warning">No se encontraron resultados de la búsqueda.</span>
             </div>
         </div>
-
     </div>
 </div>

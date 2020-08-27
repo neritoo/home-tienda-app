@@ -16,6 +16,7 @@ import { ProductoCardComponent } from './components/producto-card/producto-card.
 import { BannerComponent } from './components/banner/banner.component';
 import { FiltroCategoriasComponent } from './components/filtro-categorias/filtro-categorias.component';
 import { ConfigComponent } from './config/config/config.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ConfigComponent } from './config/config/config.component';
     ProductoCardComponent,
     BannerComponent,
     FiltroCategoriasComponent,
-    ConfigComponent
+    ConfigComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
